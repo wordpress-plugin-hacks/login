@@ -34,6 +34,22 @@ class CustomLogin
     }
 
     /**
+     * @return string
+     */
+    public function get_version()
+    {
+        return $this->version;
+    }
+
+    /**
+     * @return string
+     */
+    public function get_plugin_name()
+    {
+        return $this->plugin_name;
+    }
+
+    /**
      *
      */
     public function init()
@@ -41,7 +57,9 @@ class CustomLogin
         include_once plugin_dir_path( __DIR__ ) . "admin/class-admin-login.php";
     }
 
-
+    /**
+     *
+     */
     public function admin_loader()
     {
         new AdminLogin();
